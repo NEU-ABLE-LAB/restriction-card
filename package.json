@@ -12,7 +12,10 @@
     "security"
   ],
   "module": "dist/restriction-card.js",
-  "repository": "git@github.com/NEU-ABLE-LAB/restriction-card.git",
+  "repository": {
+    "type" : "git",
+    "url": "git+https://github.com/NEU-ABLE-LAB/restriction-card.git"
+  },
   "author": "ABLE LAB (NEU)",
   "license": "MIT",
   "dependencies": {

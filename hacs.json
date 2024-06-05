@@ -1,5 +1,7 @@
 {
     "name": "Restriction Card",
     "render_readme": true,
-    "homeassistant": "0.110.0"
+    "content_in_root": false,
+    "homeassistant": "0.110.0",
+    "filename": "restriction-card.js"
 }

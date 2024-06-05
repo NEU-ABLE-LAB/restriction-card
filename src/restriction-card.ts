@@ -242,6 +242,7 @@ class RestrictionCard extends LitElement implements LovelaceCard {
         if (!confirm(this._config.restrictions.confirm.text || 'Are you sure you want to unlock?')) {
           return;
         }
+        //TODO try adding HA action that disables DF event (toggles element that controls restruction)
       }
     }
 

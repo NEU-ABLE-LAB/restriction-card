@@ -1,4 +1,4 @@
-import { LovelaceCardConfig } from 'custom-card-helpers';
+import { ActionConfig, LovelaceCardConfig } from 'custom-card-helpers';
 
 export interface RestrictionCardConfig extends LovelaceCardConfig {
   restrictions?: RestrictionsConfig;
@@ -17,8 +17,14 @@ export interface RestrictionsConfig {
   pin?: PinRestrictionConfig;
   block?: BlockRestrictionConfig;
   hide?: HideRestrictionConfig;
+  tap_action?: ActionConfig;
 }
 
+export interface TapActionRestrictionConfig {
+  action: string;
+  exemptions?: ExemptionConfig[];
+  condition?: ConditionConfig;
+}
 export interface ConfirmRestrictionConfig {
   text?: string;
   exemptions?: ExemptionConfig[];

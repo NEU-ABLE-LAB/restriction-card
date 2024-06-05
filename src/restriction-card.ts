@@ -36,11 +36,11 @@ class RestrictionCard extends LitElement implements LovelaceCard {
     }
   }
 
-  public async getCardSize(): Promise<number> {
+  public getCardSize(): number {
     if (this.shadowRoot) {
       const element = this.shadowRoot.querySelector('#card > *') as LovelaceCard;
       if (element) {
-        return await computeCardSize(element);
+        return computeCardSize(element);
       }
     }
 

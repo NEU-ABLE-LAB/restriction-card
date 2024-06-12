@@ -244,25 +244,25 @@ class RestrictionCard extends LitElement implements LovelaceCard {
         }
         //TODO try adding HA action that disables DF event (toggles element that controls restruction)
         // adding an event for toggling the conditional entity's state to turn off the restrictions
-        const actionConfig = {
-          entity : this._config.condition.entity,
-          tap_action: {
-            action: "toggle",
-          },
-        };
+        if (this._config?.condition?.entity) {
+          const actionConfig = {
+            entity: this._config.condition.entity,
+            tap_action: {
+              action: 'toggle',
+            },
+          };
 
-        const event = new Event("hass-action", {
-          bubbles: true,
-          composed: true,
-        });
-
-        event.detail = {
-          config: actionConfig,
-          action: "tap",
-        };
-        this.dispatchEvent(event);
-      };
-
+          const event = new CustomEvent('hass-action', {
+            bubbles: true,
+            composed: true,
+            detail: {
+              config: actionConfig,
+              action: 'tap',
+            },
+          });
+          this.dispatchEvent(event);
+        }
+      }
     }
 
     const overlay = this.shadowRoot.getElementById('overlay') as LitElement;

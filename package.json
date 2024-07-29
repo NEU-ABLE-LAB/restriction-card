@@ -14,7 +14,7 @@
   "module": "dist/restriction-card.js",
   "repository": {
     "type" : "git",
-    "url": "git+https://github.com/NEU-ABLE-LAB/restriction-card.git"
+    "url": "https://github.com/NEU-ABLE-LAB/restriction-card"
   },
   "author": "ABLE LAB (NEU)",
   "license": "MIT",
